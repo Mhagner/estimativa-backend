@@ -1,0 +1,10 @@
+image: node
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm test
+  coverage: '/Statements.*?(\d+(?:\.\d+)?)%/'
