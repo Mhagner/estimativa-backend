@@ -25,15 +25,13 @@ module.exports = function (server) {
 
     //rotas de clientes
     const cliente = require('../api/controller/ServicoDeCliente')
-  /*   router.get('/clientes', cliente.listarClientes)
-    router.post('/clientes', cliente.cadastrarCliente)
-    router.delete('/clientes/:id', cliente.excluirCliente) */
     cliente.register(router, '/clientes')
 
     //Rotas de infra
     const infra = require('../api/controller/ServicoDeInfra')
-    /* router.get('/infra', infra.listarInfra)
-    router.post('/infra', infra.cadastrarInfra)
-    router.post('/infra:/id', infra.editarValorInfra) */
     infra.register(router, '/infra')
+
+    //Estimativas
+    const estimativa = require('../api/controller/ServicoEstimativa')
+    estimativa.register(router, '/estimativas')
 }
