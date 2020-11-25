@@ -28,6 +28,7 @@ const estimativaSchema = new mongoose.Schema({
     horasLider: { type: Number, required: false },
     gp: { type: Number, required: true },
     reuniaoLider: { type: Number, required: false },
+    reunioesDiaria: { type: Number, required: false },
     apropriacaoTime: { type: Number, required: false },
     custoInfra: { type: String, required: false },
     dados: [dadosSchema],
