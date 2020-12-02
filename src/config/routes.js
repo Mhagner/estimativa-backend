@@ -34,4 +34,8 @@ module.exports = function (server) {
     //Estimativas
     const estimativa = require('../api/controller/ServicoEstimativa')
     estimativa.register(router, '/estimativas')
+
+    //Parametrizacões
+    const parametrizacao = require('../api/controller/ServicoDeParametrizacao')
+    parametrizacao.register(router, '/parametrizacao-estimativa')
 }
