@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect(process.env.URL_BASE,
+module.exports = mongoose.connect("mongodb://root:m101520@estimativa-solper-shard-00-00.6nn8e.mongodb.net:27017,estimativa-solper-shard-00-01.6nn8e.mongodb.net:27017,estimativa-solper-shard-00-02.6nn8e.mongodb.net:27017/estimativa_solper?ssl=true&replicaSet=atlas-93x108-shard-0&authSource=admin&retryWrites=true&w=majority",
 {useMongoClient: true})
 
 //Tratamento das mensagens de erro
